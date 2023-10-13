@@ -8,6 +8,7 @@ import ProtectedComponentAdmin from "./components/ProtectedComponentAdmin";
 import ProtectedComponentUser from "./components/ProtectedComponentUser";
 import AdminPageDevices from "./pages/AdminPageDevices";
 import MeasurementValuesPage from "./pages/MeasurementValuesPage";
+import ChatRoom from "./pages/ChatRoom";
 
 const AppRoutes = () => {
   return [
@@ -42,6 +43,10 @@ const AppRoutes = () => {
   {
     path: '/monitored-data',
     element: <MeasurementValuesPage />
+  },
+  {
+    path: '/chat-room',
+    element: <ChatRoom />
   }
 ];
 }

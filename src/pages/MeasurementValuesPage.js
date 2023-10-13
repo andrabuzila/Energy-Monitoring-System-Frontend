@@ -1,13 +1,11 @@
-import { useState, useEffect, useContext } from "react"
+import { useState, useEffect } from "react"
 import axios from 'axios'
-import { AppContext } from "../App";
 import  Dropdown  from "react-dropdown"
 import "../styles/pageStyle.scss"
 
 const MeasurementValuesPage = () => {
     const [data, setData] = useState("")
     const [buttonPressed, setButtonPressed] = useState(false)
-    const [allDevices, setAllDevices] = useState(null)
     const [selectedDevice, setSelectedDevice] = useState(null)
     const [devices, setDevices] = useState(null)
 

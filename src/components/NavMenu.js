@@ -26,13 +26,13 @@ const NavMenu =()=> {
               {
                 isLoggedIn && userRole === 'administrator'  &&
                   <NavItem>
-                  <NavLink tag={Link} className="text-white" to="/admin-page-devices">Devices</NavLink>
+                  <NavLink tag={Link} className="text-white" to="/admin-page-devices">Personal Devices</NavLink>
                 </NavItem>
               }
               {
                 isLoggedIn && userRole === 'administrator' && 
                 <NavItem>
-                    <NavLink tag={Link} className="text-white" to="/admin-page">Users</NavLink>
+                    <NavLink tag={Link} className="text-white" to="/admin-page">Users and Devices</NavLink>
                   </NavItem>
               }
               {
@@ -45,6 +45,12 @@ const NavMenu =()=> {
                 isLoggedIn && 
                 <NavItem>
                   <NavLink tag={Link} className="text-white" to="/monitored-data">Monitored Data</NavLink>
+                </NavItem>
+              }
+              {
+                isLoggedIn && 
+                <NavItem>
+                  <NavLink tag={Link} className="text-white" to="/chat-room">Chat Room</NavLink>
                 </NavItem>
               }
               {

@@ -27,9 +27,10 @@ const AdminPageDevices = () => {
     const onDeviceClicked = async (e,val) => {
         try{
             const monitoredData = await axios.get(`http://localhost:8083/User/GetMonitoredData/${val.id}`)
+            console.log(monitoredData.data)
             let label = []
             let data = []
-            label = monitoredData.data.map((el) => el.timestamp)
+            label = monitoredData.data.map((el) => el.timeStamp)
             data = monitoredData.data.map((el) => el.energyConsumption)
             setChartData({
                 labels: label,
